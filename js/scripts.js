@@ -1,5 +1,10 @@
-var buttonClassItem = document.getElementsByClassName('button');
+var list = document.getElementById('list');
+var add = document.getElementById('addElem');
+var liElements = document.getElementsByTagName('li');
 
-for (var i = 0; i < buttonClassItem.length; i++) {
-    alert(buttonClassItem[i].innerText);
-}
+add.addEventListener('click', function() {
+	var element = document.createElement('li');
+    element.innerHTML = 'item ' + liElements.length;
+    list.appendChild(element);
+});
+
